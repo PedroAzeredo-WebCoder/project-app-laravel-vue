@@ -67,7 +67,8 @@
         ],
         "artisan": "docker-compose exec php php artisan",
         "comp": "docker-compose exec php composer",
-        "npm":  "docker-compose exec node npm"
+        "npm":  "docker-compose exec node npm",
+        "start-project": "docker-compose build --no-cache && docker-compose up --build -d && composer comp install && composer comp update && composer comp dump-autoload -o && composer npm install && composer npm run build && composer artisan migrate"
     },
     "extra": {
         "laravel": {
