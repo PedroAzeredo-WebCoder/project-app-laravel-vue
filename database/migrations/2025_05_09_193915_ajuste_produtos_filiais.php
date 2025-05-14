@@ -24,9 +24,6 @@ return new class extends Migration
             $table->decimal('preco', 8, 2);
             $table->integer('quantidade');
             $table->timestamps();
-
-            $table->foreignId('filial_id')->constrained('filiais');
-            $table->foreignId('produto_id')->constrained('produtos');
         });
 
         Schema::table('produtos', function (Blueprint $table) {
